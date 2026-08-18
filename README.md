@@ -1,4 +1,4 @@
-# 💱 FX Convert - Currency Converter
+# FX Convert - Currency Converter
 
 A fast, modern, and sleek real-time currency converter built with **React 19**, **Vite**, and **Axios**.
 
