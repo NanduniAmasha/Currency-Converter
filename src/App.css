@@ -1,0 +1,104 @@
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  box-shadow: 0 0 60px rgba(108, 99, 255, 0.12);
+  animation: floatUp 0.6s ease forwards;
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card-header { text-align: center; margin-bottom: 2rem; }
+
+.logo-dot {
+  width: 10px; height: 10px;
+  background: #6C63FF;
+  border-radius: 50%;
+  margin: 0 auto 0.75rem;
+  box-shadow: 0 0 12px #6C63FF;
+}
+
+h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; color: #F0F4FF; }
+.subtitle { font-size: 0.8rem; color: rgba(240,244,255,0.4); margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+/* Currency Input */
+.currency-input { margin-bottom: 1.2rem; }
+.input-label { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(240,244,255,0.35); display: block; margin-bottom: 8px; }
+
+.input-row {
+  display: flex; gap: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; padding: 4px;
+  transition: border-color 0.2s;
+}
+.input-row:focus-within { border-color: rgba(108,99,255,0.5); }
+
+.input-row input {
+  flex: 1; background: transparent; border: none; outline: none;
+  color: #F0F4FF; font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem; font-weight: 500; padding: 0.6rem 0.8rem;
+  min-width: 0;
+}
+.input-row input::placeholder { color: rgba(240,244,255,0.15); }
+.input-row input[readonly] { color: #00D4FF; cursor: default; }
+
+.input-row select {
+  background: rgba(108,99,255,0.15);
+  border: 1px solid rgba(108,99,255,0.25);
+  border-radius: 10px;
+  color: #00D4FF;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.input-row select:hover,
+.input-row select:focus {
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(108, 99, 255, 0.25);
+}
+
+.input-row select option {
+  background-color: #0D1322;
+  color: #00D4FF;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+/* Swap Button */
+.swap-btn {
+  display: block; margin: 0.5rem auto 1.2rem;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, #6C63FF, #00D4FF);
+  border: none; color: white; font-size: 1.2rem;
+  cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(108,99,255,0.4);
+}
+.swap-btn:hover { transform: scale(1.1) rotate(180deg); box-shadow: 0 6px 28px rgba(108,99,255,0.6); }
+.swap-btn.spinning { animation: spin 0.4s ease; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Rate Display */
+.rate-display {
+  display: flex; justify-content: center; align-items: center; gap: 0.75rem;
+  margin-top: 1.5rem; padding: 0.75rem 1rem;
+  background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.1);
+  border-radius: 12px; font-size: 0.82rem; color: rgba(240,244,255,0.5);
+  transition: all 0.3s;
+}
+.rate-value { font-size: 1.05rem; font-weight: 600; color: #00D4FF; }
+.rate-display.pulse { border-color: rgba(0,212,255,0.4); background: rgba(0,212,255,0.08); }
