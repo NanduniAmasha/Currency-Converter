@@ -61,24 +61,11 @@ currency-converter/
 
 ---
 
-## 🔌 API Configuration
+## 🔌 API 
 
-In [`vite.config.js`](file:///d:/currency-converter/vite.config.js), requests to `/api` are proxied to the Frankfurter API to prevent CORS issues:
+This application uses the [Frankfurter API](https://api.frankfurter.dev/) to retrieve real-time exchange rates.
 
-```javascript
-server: {
-  proxy: {
-    '/api': {
-      target: 'https://api.frankfurter.dev',
-      changeOrigin: true,
-      rewrite: (path) => path.replace(/^\/api/, ''),
-    },
-  },
-}
-```
+A Vite proxy is configured to handle API requests during development and avoid CORS issues.
 
----
 
-## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
