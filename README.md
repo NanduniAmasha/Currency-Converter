@@ -48,46 +48,6 @@ currency-converter/
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- [Node.js](https://nodejs.org/) (version 18 or higher)
-- npm (installed automatically with Node.js)
-
-### Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/currency-converter.git
-   cd currency-converter
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in browser:**
-   Navigate to `http://localhost:5173`
-
----
-
-## 📜 Available Scripts
-
-| Command | Description |
-| :--- | :--- |
-| `npm run dev` | Starts development server with HMR |
-| `npm run build` | Builds the app for production in the `dist` folder |
-| `npm run preview` | Previews the production build locally |
-| `npm run lint` | Runs ESLint to check code quality |
-
----
-
 ## 🌐 Supported Currencies
 
 | Code | Currency Name | Code | Currency Name |
